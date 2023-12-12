@@ -17,15 +17,13 @@ jobs:
     steps:
       - name: Checkout 🛎
         uses: actions/checkout@v3
-        
+      - run: mkdir -p path/to/artifact
       - name: Run docker-compose 🐳
         run: docker-compose up -d e2e-chrome e2e-firefox e2e-edge e2e-electron
         
       - name: Wait for services to start ⏱️
         run: docker-compose logs -f
-      - name: Create directory
-      - run: mkdir -p path/to/artifact
-      
+        
       - name: Upload Chrome artifacts 📸
         uses: actions/upload-artifact@v3
         with:
