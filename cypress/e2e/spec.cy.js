@@ -1,5 +1,5 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('https://fado.vn')
+    cy.visit('httpsasdas222222://fado.vn')
   })
 })
